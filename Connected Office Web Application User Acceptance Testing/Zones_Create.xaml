@@ -133,7 +133,7 @@
           </ui:CursorPosition>
         </ui:Click.CursorPosition>
         <ui:Click.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b9a9b048-544e-440f-93e9-f843ca8486c4" InformativeScreenshot="01cdeb7cb21641cc23815991a16754e2" Selector="&lt;html app='chrome.exe' title='Zones - Connected Office: Device Management' /&gt;&lt;webctrl aaname='Zones' tag='A' /&gt;">
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b9a9b048-544e-440f-93e9-f843ca8486c4" InformativeScreenshot="bf08288f63b3b921e17eb9a3a1e7610d" Selector="&lt;html app='chrome.exe' title='Home Page - Connected Office: Device Management' /&gt;&lt;webctrl aaname='Zones' tag='A' /&gt;">
             <ui:Target.TimeoutMS>
               <InArgument x:TypeArguments="x:Int32" />
             </ui:Target.TimeoutMS>
