@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Edit" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1872,2696" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Edit" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1872,3154" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -88,9 +88,13 @@
       <AssemblyReference>System.Data.Common</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Edits zone items by scraping the zone data, iterating over the extracted datatable and editing each entry" DisplayName="Edit: Edit zone items" sap:VirtualizedContainerService.HintSize="589,2631" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Edits zone items by scraping the zone data, iterating over the extracted datatable and editing each entry" DisplayName="Edit: Edit zone items" sap:VirtualizedContainerService.HintSize="589,3049" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:Int32" Default="2" Name="editCount" />
+      <Variable x:TypeArguments="x:Int32" Name="editCount">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Int32" Value="2" />
+        </Variable.Default>
+      </Variable>
       <Variable x:TypeArguments="sd:DataTable" Name="ExtractDataTable">
         <Variable.Default>
           <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">new System.Data.DataTable();</CSharpValue>
@@ -103,6 +107,28 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" sap2010:Annotation.AnnotationText="Navigate to the home page" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe'" sap:VirtualizedContainerService.HintSize="527,378" sap2010:WorkflowViewState.IdRef="BrowserScope_5" InformativeScreenshot="fb26040be89c89f4fbb03a75728b9e0b" Selector="&lt;html app='chrome.exe'/&gt;">
+      <ui:BrowserScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,191" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="338,69" sap2010:WorkflowViewState.IdRef="NavigateTo_1" Url="https://connectedoffice-devicemanagement.azurewebsites.net/" />
+          </Sequence>
+        </ActivityAction>
+      </ui:BrowserScope.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:BrowserScope>
     <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="Click the &quot;Zones&quot; button" ClickType="CLICK_SINGLE" DisplayName="Click 'A  /Zones'" sap:VirtualizedContainerService.HintSize="527,147" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
@@ -115,7 +141,7 @@
         </ui:CursorPosition>
       </ui:Click.CursorPosition>
       <ui:Click.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="15b43ef5-b32a-489a-9f3c-8465a5ec820a" InformativeScreenshot="68f635b27be9b6f333646222c1616dd7" Selector="&lt;html app='chrome.exe' title='Zones - Connected Office: Device Management' /&gt;&lt;webctrl aaname='Zones' tag='A' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="15b43ef5-b32a-489a-9f3c-8465a5ec820a" InformativeScreenshot="76978c2f733f649e1f3f76bc449b5c60" Selector="&lt;html app='chrome.exe' title='Home Page - Connected Office: Device Management' /&gt;&lt;webctrl aaname='Zones' tag='A' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>

@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Delete" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="848,1784" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Delete" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1872,2270" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -78,7 +78,7 @@
       <AssemblyReference>System.Private.Xml</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Implements zone deletion functionality" DisplayName="Delete: Deletes all zone items" sap:VirtualizedContainerService.HintSize="558.4,1719.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Implements zone deletion functionality" DisplayName="Delete: Deletes all zone items" sap:VirtualizedContainerService.HintSize="558,2125" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="ExtractDataTable">
         <Variable.Default>
@@ -92,7 +92,29 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="Click the &quot;Zones&quot; button" ClickType="CLICK_SINGLE" DisplayName="Click 'A  /Zones'" sap:VirtualizedContainerService.HintSize="496,148" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" sap2010:Annotation.AnnotationText="Navigate to the home page" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe'" sap:VirtualizedContainerService.HintSize="496,378" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="fb26040be89c89f4fbb03a75728b9e0b" Selector="&lt;html app='chrome.exe'/&gt;">
+      <ui:BrowserScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,191" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="338,69" sap2010:WorkflowViewState.IdRef="NavigateTo_1" Url="https://connectedoffice-devicemanagement.azurewebsites.net/" />
+          </Sequence>
+        </ActivityAction>
+      </ui:BrowserScope.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:BrowserScope>
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="Click the &quot;Zones&quot; button" ClickType="CLICK_SINGLE" DisplayName="Click 'A  /Zones'" sap:VirtualizedContainerService.HintSize="496,147" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -104,7 +126,7 @@
         </ui:CursorPosition>
       </ui:Click.CursorPosition>
       <ui:Click.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9299f26e-1e36-4625-9d4c-72d9b8bba6d1" InformativeScreenshot="f906cc778c03fa3df5439db5807751c6" Selector="&lt;html app='chrome.exe' title='Zones - Connected Office: Device Management' /&gt;&lt;webctrl aaname='Zones' tag='A' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9299f26e-1e36-4625-9d4c-72d9b8bba6d1" InformativeScreenshot="f906cc778c03fa3df5439db5807751c6" Selector="&lt;html app='chrome.exe' title='Home Page - Connected Office: Device Management' /&gt;&lt;webctrl aaname='Zones' tag='A' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -119,26 +141,26 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:Click>
-    <Sequence sap2010:Annotation.AnnotationText="Extracts the zones and stores them in a datatable" DisplayName="Data Scraping: Extract zones" sap:VirtualizedContainerService.HintSize="496,551.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence sap2010:Annotation.AnnotationText="Extracts the zones and stores them in a datatable" DisplayName="Data Scraping: Extract zones" sap:VirtualizedContainerService.HintSize="496,547" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'Zones Con Page'" sap:VirtualizedContainerService.HintSize="433.6,396.8" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="b058a49ce190e5a6badd745d91901a63" Selector="&lt;html app='chrome.exe' title='Zones - Connected Office: Device Management' /&gt;">
+      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'Zones Con Page'" sap:VirtualizedContainerService.HintSize="434,394" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="b058a49ce190e5a6badd745d91901a63" Selector="&lt;html app='chrome.exe' title='Zones - Connected Office: Device Management' /&gt;">
         <ui:BrowserScope.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,240" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,238" sap2010:WorkflowViewState.IdRef="Sequence_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DisplayName="Extract Structured Data 'TABLE'" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Zone Name' attr='text' /&gt;&lt;column name='Zone Description' attr='text' /&gt;&lt;column name='Date Created' attr='text' /&gt;&lt;column name='Column-3' attr='text' /&gt;&lt;column name='Column-4' attr='text' /&gt;&lt;column name='Column-5' attr='text' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="337.6,116.8" sap2010:WorkflowViewState.IdRef="ExtractData_1" MaxNumberOfResults="0" SimulateClick="True">
+              <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DisplayName="Extract Structured Data 'TABLE'" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Zone Name' attr='text' /&gt;&lt;column name='Zone Description' attr='text' /&gt;&lt;column name='Date Created' attr='text' /&gt;&lt;column name='Column-3' attr='text' /&gt;&lt;column name='Column-4' attr='text' /&gt;&lt;column name='Column-5' attr='text' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="338,116" sap2010:WorkflowViewState.IdRef="ExtractData_1" MaxNumberOfResults="0" SimulateClick="True">
                 <ui:ExtractData.DataTable>
                   <InOutArgument x:TypeArguments="sd:DataTable">
                     <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">ExtractDataTable</CSharpReference>
@@ -157,19 +179,19 @@
         </ui:BrowserScope.Body>
       </ui:BrowserScope>
     </Sequence>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Iterate over the zones datatable and deletes each entry" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="496,616" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Iterate over the zones datatable and deletes each entry" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="496,612" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,459.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,456" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="Click the delete button" ClickType="CLICK_SINGLE" DisplayName="Click 'IMG'" sap:VirtualizedContainerService.HintSize="337.6,148" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="Click the delete button" ClickType="CLICK_SINGLE" DisplayName="Click 'IMG'" sap:VirtualizedContainerService.HintSize="338,147" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -196,7 +218,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:Click>
-            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="Confirm deletion" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT'" sap:VirtualizedContainerService.HintSize="337.6,148" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="Confirm deletion" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT'" sap:VirtualizedContainerService.HintSize="338,147" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -237,7 +259,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachRow>
-    <Throw sap2010:Annotation.AnnotationText="Throw an exception to escape the workflow" DisplayName="Throw: Escape workflow" sap:VirtualizedContainerService.HintSize="496,129.6" sap2010:WorkflowViewState.IdRef="Throw_1">
+    <Throw sap2010:Annotation.AnnotationText="Throw an exception to escape the workflow" DisplayName="Throw: Escape workflow" sap:VirtualizedContainerService.HintSize="496,128" sap2010:WorkflowViewState.IdRef="Throw_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>

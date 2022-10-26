@@ -65,13 +65,13 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap:VirtualizedContainerService.HintSize="634,721" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap:VirtualizedContainerService.HintSize="634,709" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
         <av:Size x:Key="ShapeSize">60,75</av:Size>
-        <x:Double x:Key="Height">674.8</x:Double>
+        <x:Double x:Key="Height">663.1999999999999</x:Double>
         <av:PointCollection x:Key="ConnectorLocation">300,77.7 300,138.8</av:PointCollection>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
@@ -85,7 +85,7 @@
           <av:Size x:Key="ShapeSize">200,103</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <TryCatch sap2010:Annotation.AnnotationText="Implements category deletion functionality" DisplayName="Try Catch: Delete categories" sap:VirtualizedContainerService.HintSize="200,103" sap2010:WorkflowViewState.IdRef="TryCatch_6">
+      <TryCatch sap2010:Annotation.AnnotationText="Implements device deletion functionality" DisplayName="Try Catch: Delete devices" sap:VirtualizedContainerService.HintSize="200,103" sap2010:WorkflowViewState.IdRef="TryCatch_6">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -93,7 +93,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <TryCatch.Try>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Categories_Delete.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,122" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Categories_Delete.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Devices_Delete.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,122" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Devices_Delete.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <scg:Dictionary x:TypeArguments="x:String, Argument" />
             </ui:InvokeWorkflowFile.Arguments>
@@ -128,10 +128,10 @@
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">200,416.8</av:Point>
           <av:Size x:Key="ShapeSize">200,103</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">200,468.3 170,468.3 170,608.3 200,608.3</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">300,519.8 300,556.8</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <TryCatch sap2010:Annotation.AnnotationText="Implements category editing functionality" DisplayName="Try Catch: Edit categories" sap:VirtualizedContainerService.HintSize="200,103" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+      <TryCatch sap2010:Annotation.AnnotationText="Implements device editing functionality" DisplayName="Try Catch: Edit devices" sap:VirtualizedContainerService.HintSize="200,103" sap2010:WorkflowViewState.IdRef="TryCatch_5">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -139,7 +139,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <TryCatch.Try>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Invokes the Edit.xaml workflow to edit Zone items. The workflow is escaped by throwing a BusinessRuleException" DisplayName="Categories_Edit.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,179" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Categories_Edit.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Invokes the Edit.xaml workflow to edit Zone items. The workflow is escaped by throwing a BusinessRuleException" DisplayName="Devices_Edit.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,179" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Devices_Edit.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <scg:Dictionary x:TypeArguments="x:String, Argument" />
             </ui:InvokeWorkflowFile.Arguments>
@@ -182,10 +182,10 @@
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">200,278.8</av:Point>
           <av:Size x:Key="ShapeSize">200,103</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">400,330.3 430,330.3 430,468.3 400,468.3</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">300,381.8 300,416.8</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <TryCatch sap2010:Annotation.AnnotationText="Implements category creation functionality" DisplayName="Try Catch: Create categories" sap:VirtualizedContainerService.HintSize="200,103" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+      <TryCatch sap2010:Annotation.AnnotationText="Implements category creation functionality" DisplayName="Try Catch: Create devices" sap:VirtualizedContainerService.HintSize="200,103" sap2010:WorkflowViewState.IdRef="TryCatch_2">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -200,7 +200,7 @@
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Categories_Create.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="338,122" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Categories_Create.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Devices_Create.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="338,122" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Devices_Create.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <scg:Dictionary x:TypeArguments="x:String, Argument" />
               </ui:InvokeWorkflowFile.Arguments>
@@ -250,14 +250,14 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <TryCatch.Try>
-          <Sequence sap2010:Annotation.AnnotationText="Invokes the Login.xaml workflow to create Zone items. The workflow is escaped by throwing a BusinessRuleException" sap:VirtualizedContainerService.HintSize="400,290.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <Sequence sap2010:Annotation.AnnotationText="Invokes the Login.xaml workflow to create Zone items. The workflow is escaped by throwing a BusinessRuleException" sap:VirtualizedContainerService.HintSize="400,286" sap2010:WorkflowViewState.IdRef="Sequence_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Login.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="337.6,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Login.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Login.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="338,122" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Login.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <scg:Dictionary x:TypeArguments="x:String, Argument" />
               </ui:InvokeWorkflowFile.Arguments>
@@ -265,7 +265,7 @@
           </Sequence>
         </TryCatch.Try>
         <TryCatch.Catches>
-          <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -276,7 +276,7 @@
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="ui:BusinessRuleException" Name="exception" />
               </ActivityAction.Argument>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,101" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
                 <ui:LogMessage.Message>
                   <InArgument x:TypeArguments="x:Object">
                     <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">"Login successful"</CSharpValue>
