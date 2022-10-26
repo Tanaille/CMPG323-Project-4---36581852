@@ -86,7 +86,7 @@
       <AssemblyReference>System.Private.Uri</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Implements zone deletion functionality" DisplayName="Delete: Deletes all zone items" sap:VirtualizedContainerService.HintSize="558,2125" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Implements category deletion functionality" DisplayName="Delete: Deletes all category items" sap:VirtualizedContainerService.HintSize="558,2125" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="ExtractDataTable">
         <Variable.Default>

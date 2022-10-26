@@ -156,7 +156,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:Click>
-    <Sequence sap2010:Annotation.AnnotationText="Scrape the Device entries and save them in a datatable" DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="578,547" sap2010:WorkflowViewState.IdRef="Sequence_15">
+    <Sequence sap2010:Annotation.AnnotationText="Scrape the Device entries and save them in a datatable" DisplayName="Data Scraping: Extract devices" sap:VirtualizedContainerService.HintSize="578,547" sap2010:WorkflowViewState.IdRef="Sequence_15">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
