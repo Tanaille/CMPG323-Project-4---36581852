@@ -5,7 +5,7 @@
     <x:Property Name="testColumn" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1871,1000</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>847.2,791.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -95,7 +95,7 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="WriteResults" sap:VirtualizedContainerService.HintSize="462,753" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This workflow is invoked after each CRUD activity. It writes a &quot;TRUE&quot; restult to the specified Excel cell if the activity has been successfuly completed" DisplayName="Write activity test results" sap:VirtualizedContainerService.HintSize="462.4,726.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="testResultsDatatable" />
       <Variable x:TypeArguments="x:Int32" Name="rowIndex" />
@@ -105,27 +105,17 @@
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadRange AddHeaders="True" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="400,97" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Test Results" WorkbookPath="Connected Office Test Data.xlsx">
-      <ui:ReadRange.DataTable>
-        <OutArgument x:TypeArguments="sd:DataTable">
-          <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">testResultsDatatable</CSharpReference>
-        </OutArgument>
-      </ui:ReadRange.DataTable>
-      <ui:ReadRange.Range>
-        <InArgument x:TypeArguments="x:String">
-          <Literal x:TypeArguments="x:String" Value="" />
-        </InArgument>
-      </ui:ReadRange.Range>
-    </ui:ReadRange>
-    <Sequence DisplayName="Write zone test results" sap:VirtualizedContainerService.HintSize="400,357" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence sap2010:Annotation.AnnotationText="Write result to the specified cell" DisplayName="Write zone test results" sap:VirtualizedContainerService.HintSize="400,389.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Assign sap:VirtualizedContainerService.HintSize="338,70" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign DisplayName="Assign: Cell address" sap:VirtualizedContainerService.HintSize="337.6,69.6" sap2010:WorkflowViewState.IdRef="Assign_1">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">
             <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">cellAddress</CSharpReference>
@@ -137,7 +127,7 @@
           </InArgument>
         </Assign.Value>
       </Assign>
-      <ui:WriteCell DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="338,125" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="Test Results" Text="TRUE" WorkbookPath="Connected Office Test Data.xlsx">
+      <ui:WriteCell DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="337.6,125.6" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="Test Results" Text="TRUE" WorkbookPath="Connected Office Test Data.xlsx">
         <ui:WriteCell.Cell>
           <InArgument x:TypeArguments="x:String">
             <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">cellAddress</CSharpValue>
@@ -145,7 +135,12 @@
         </ui:WriteCell.Cell>
       </ui:WriteCell>
     </Sequence>
-    <Throw sap:VirtualizedContainerService.HintSize="400,97" sap2010:WorkflowViewState.IdRef="Throw_1">
+    <Throw sap2010:Annotation.AnnotationText="Throw an exception to escape the workflow" DisplayName="Throw: Escape workflow" sap:VirtualizedContainerService.HintSize="400,129.6" sap2010:WorkflowViewState.IdRef="Throw_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
       <InArgument x:TypeArguments="s:Exception">
         <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">new BusinessRuleException("Wrote zone create test result")</CSharpValue>
       </InArgument>
